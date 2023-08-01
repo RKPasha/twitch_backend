@@ -1,0 +1,19 @@
+{
+  "name": "twitch-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RKPasha/twitch-backend.git"
+  },
+  "author": "Rehan Pasha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RKPasha/twitch-backend/issues"
+  },
+  "homepage": "https://github.com/RKPasha/twitch-backend#readme"
+}
