@@ -9,6 +9,7 @@ const HOST = '0.0.0.0';
 
 app.get('/', (req, res) => {
   res.send('Hello, World!');
+  console.log('Request received');
 });
 
 app.use(enforce.HTTPS());
