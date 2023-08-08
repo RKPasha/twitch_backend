@@ -1,14 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const authMiddleware = require('../authMiddleware');
+const validateTwitchUsername = require('../twitchUsernameMiddleware');
 const userController = require('../controllers/user_controller');
 
-// const UserController = new UserController();
-// Student routes
-router.post('/register', userController.register);
-// router.put('/account/update/name', authMiddleware, studentController.updateAccountName);
-// router.put('/account/update/email', authMiddleware, studentController.updateAccountEmail);
-// router.put('/account/update/pass', authMiddleware, studentController.updateAccountPassword);
-router.post('/login', userController.login);
+// Add a user and related data
+router.post('/addUser', validateTwitchUsername, userController.addUser);
+router.patch('/editUser/:id', validateTwitchUsername, userController.editUser);
+router.delete('/deleteUser/:id', userController.deleteUser);
+router.get('/getUserById/:id', userController.getUserById);
+router.get('/', userController.getAllUsers);
+router.get('/getUserWithAccess/:id', userController.getUserWithAccess);
 
 module.exports = router;
